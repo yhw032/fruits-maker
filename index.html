@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="재미있는 과일 합치기 게임 - 같은 과일을 합쳐서 더 큰 과일을 만드세요!">
+    <title>🍇 Fruits Maker - 과일 합치기 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>🍇 Fruits Maker</h1>
+            <div class="score-panel">
+                <div class="score-item">
+                    <span class="label">Score</span>
+                    <span class="value" id="score">0</span>
+                </div>
+                <div class="score-item">
+                    <span class="label">Best</span>
+                    <span class="value" id="bestScore">0</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="game-wrapper">
+            <div class="next-fruit-indicator">
+                <span class="label">Next</span>
+                <canvas id="nextFruitCanvas" width="80" height="80"></canvas>
+            </div>
+
+            <div class="game-container">
+                <div class="game-line"></div>
+                <canvas id="gameCanvas"></canvas>
+                <div class="cursor-guide" id="cursorGuide"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" id="startBtn">
+                    <span class="btn-icon">▶</span>
+                    <span class="btn-text">Start Game</span>
+                </button>
+                <button class="btn btn-secondary" id="restartBtn" style="display: none;">
+                    <span class="btn-icon">↻</span>
+                    <span class="btn-text">Restart</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="game-over-overlay" id="gameOverOverlay" style="display: none;">
+            <div class="game-over-content">
+                <h2 class="game-over-title">Game Over!</h2>
+                <div class="final-score">
+                    <span class="label">Final Score</span>
+                    <span class="value" id="finalScore">0</span>
+                </div>
+                <button class="btn btn-large" id="playAgainBtn">
+                    <span class="btn-icon">↻</span>
+                    <span class="btn-text">Play Again</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h3>How to Play</h3>
+            <ul>
+                <li>🖱️ Move your mouse to position the fruit</li>
+                <li>🖱️ Click to drop the fruit</li>
+                <li>✨ Merge same fruits to create bigger ones!</li>
+                <li>⚠️ Don't let fruits overflow the line</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="game.js"></script>
+</body>
+
+</html>
