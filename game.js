@@ -24,7 +24,7 @@
             { name: 'apple', radius: 55, color: '#ff6348', emoji: '🍎', score: 21 },
             { name: 'pear', radius: 62, color: '#26de81', emoji: '🍐', score: 28 },
             { name: 'peach', radius: 68, color: '#ffbe76', emoji: '🍑', score: 36 },
-            { name: 'pineapple', radius: 75, color: '#f6b93b', emoji: '🍍', score: 45 },
+            { name: 'pineapple', radius: 85, color: '#f6b93b', emoji: '🍍', score: 45 },
             { name: 'melon', radius: 120, color: '#55efc4', emoji: '🍈', score: 55 },
             { name: 'watermelon', radius: 150, color: '#ff7675', emoji: '🍉', score: 66 }
         ];
